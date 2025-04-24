@@ -1,406 +1,409 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Modal Linux Style</title>
-  <style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    body {
-        font-family: 'Fira Code', monospace;
-        background-color: #111;
-        color: #eee;
-        padding: 2rem;
-    }
-
-    .container {
-
-
-        padding: 3rem;
-    }
-
-    nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 4rem;
-    }
-
-    nav .logo {
-        font-size: 1.5rem;
-        color: #00ff9f;
-    }
-
-    nav ul {
-        list-style: none;
-        display: flex;
-        gap: 2rem;
-    }
-
-    nav ul li a {
-        color: #eee;
-        text-decoration: none;
-        font-size: 1rem;
-        transition: color .2s;
-    }
-
-    nav ul li a:hover,
-    nav ul li a.active {
-        color: #00ff9f;
-    }
-
-    nav .contact-btn a {
-        padding: .5rem 1rem;
-        background: #00ff9f;
-        color: #111;
-        border-radius: 4px;
-        font-weight: bold;
-        text-decoration: none;
-        transition: background .2s;
-    }
-
-    nav .contact-btn a:hover {
-        background: #00c77a;
-    }
-
-    .main {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-    }
-
-    .intro h2 {
-        font-size: 2rem;
-        color: #00ff9f;
-        margin-bottom: 1rem;
-        width: 25rem;
-    }
-
-
-
-    .intro .subtitle {
-        font-size: 1.2rem;
-        color: #aaa;
-        margin-bottom: 2rem;
-    }
-
-    .intro .get-started {
-        display: inline-block;
-        padding: 0.8rem 2rem;
-        background: #00ff9f;
-        color: #111;
-        border-radius: 5px;
-        text-decoration: none;
-        font-weight: bold;
-        transition: background .2s, transform .2s;
-    }
-
-    .intro .get-started:hover {
-        background: #00c77a;
-        transform: translateY(-2px);
-    }
-
-    .graphic {
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .circle {
-        width: 500px;
-        height: 500px;
-        border: 2px solid #2adc42;
-        border-radius: 50%;
-        background: rgba(255, 85, 85, 0.1);
-        position: relative;
-    }
-
-    .circle .caption {
-        position: absolute;
-        bottom: -2.5rem;
-        left: 50%;
-        transform: translateX(-50%);
-        color: #00ff9f;
-        font-size: 0.9rem;
-    }
-
-    @media(max-width: 900px) {
-        .main {
-            flex-direction: column;
-            gap: 3rem;
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hacker Style Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        .circle {
-            width: 250px;
-            height: 250px;
-        }
-    }
-
-    nav {
-        position: relative;
-    }
-
-    nav::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        bottom: -20px;
-        width: 100%;
-        height: 2px;
-        background: #00ff9f;
-        box-shadow: 0 0 10px rgba(0, 255, 159, 0.6),
-            0 0 20px rgba(0, 255, 159, 0.4),
-            0 0 30px rgba(0, 255, 159, 0.2);
-    }
-
-    .intro h1 {
-        font-size: 3rem;
-        margin-bottom: 1rem;
-        width: 14ch;
-        white-space: nowrap;
-        overflow: hidden;
-        border-right: 2px solid #00ff9f;
-        animation: typing 3s steps(13);
-        /* solo typing */
-
-        /* cursor */
-        animation: typing 3s steps(14), blink 0.75s step-end infinite;
-    }
-
-    /* Animación de escritura */
-    @keyframes typing {
-        from {
-            width: 0;
+        .highlight-box {
+            background: #1a1a1a;
+            border-left: 5px solid #00ff9f;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            font-style: italic;
+            line-height: 1.6;
+            box-shadow: 0 0 10px rgba(0, 255, 159, 0.1);
         }
 
-        to {
-            width: 14ch;
+        body {
+            font-family: 'Fira Code', monospace;
+            background-color: #111;
+            color: #eee;
+            padding: 2rem;
         }
-    }
 
-    @keyframes blink {
-        50% {
-            border-color: transparent;
+        .container {
+
+            margin: auto;
         }
-    }
+
+        header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            color: #00ff9f;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #aaa;
+        }
+
+        .highlight {
+            color: #00ff9f;
+        }
+
+        .card {
+
+            background: #1a1a1a;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            box-shadow: 0 0 15px rgba(0, 255, 159, 0.1);
+            transition: 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 25px rgba(0, 255, 159, 0.3);
+        }
+
+        .card h2,
+        .highlight-box h2 {
+            margin-bottom: 1rem;
+            color: #00ff9f;
+        }
+
+        .cta {
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .cta a {
+            color: #111;
+            background-color: #00ff9f;
+            padding: 0.8rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .cta a:hover {
+            background-color: #00c77a;
+        }
+
+        .item {
+
+            padding: 0 15%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            margin-bottom: 4rem;
+            height: auto;
+        }
+
+        .item .card {
+            margin: 2rem;
+        }
 
 
-    .role-badge {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5rem;
-        padding: 0.4rem 0.8rem;
-        background: rgba(0, 255, 159, 0.1);
-        border: 1px solid #00ff9f;
-        border-radius: 1rem;
-        font-size: 0.9rem;
-        font-weight: 500;
-        color: #00ff9f;
-        letter-spacing: 0.5px;
-        margin-bottom: 1.5rem;
-    }
+        .image-side {
+            width: 35%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 255, 159, 0.1);
+        }
 
-    .role-badge .icon {
-        font-size: 1.1rem;
-    }
-
-    .role-badge .divider {
-        color: #00ff9f;
-        opacity: 0.6;
-    }
-
-
-    nav ul li {
-position: relative; /* Para posicionar el pseudo-elemento */
-}
-
-nav ul li a {
-position: relative;
-z-index: 1; /* Para que el texto esté sobre la línea */
-transition: color 0.3s ease;
-}
-
-nav ul li a::after {
-content: '';
-position: absolute;
-left: 0;
-bottom: -4px;            /* Separación de la línea */
-width: 0%;
-height: 2px;
-background: #00ff9f;
-transition: width 0.3s ease;
-}
-
-nav ul li a:hover::after,
-nav ul li a.active::after {
-width: 100%;
-}
-
-nav ul li a:hover {
-color: #00ff9f;
-transform: translateY(-2px);
-}
-
-nav ul li:hover {
-transform: translateY(-2px);
-transition: transform 0.3s ease;
-}
-</style>
-  <style>
-    body {
-      font-family: 'Fira Code', monospace;
-      background: #111;
-      color: #eee;
-      height: 100vh;
-      overflow: hidden;
-      margin: 0;
-      padding: 0;
-    }
-    /* Overlay */
-    .overlay {
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.6);
-      display: none;
-      justify-content: center;
-      align-items: center;
-      z-index: 10;
-    }
-    /* Modal ventana */
-    .modal {
-      width: 300px;
-      background: #222;
-      border: 2px solid #00ff9f;
-      border-radius: 4px;
-      box-shadow: 0 0 10px rgba(0,255,159,0.5);
-      position: absolute;
-      top: 100px;
-      left: calc(50% - 150px);
-      cursor: move;
-    }
-    /* Barra título */
-    .modal-header {
-      background: #00ff9f;
-      color: #111;
-      padding: 0.5rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      user-select: none;
-    }
-    .modal-header .title {
-      font-weight: bold;
-    }
-    .modal-header .close-btn {
-      cursor: pointer;
-      font-weight: bold;
-      padding: 0 0.5rem;
-    }
-    /* Contenido */
-    .modal-body {
-      padding: 1rem;
-      line-height: 1.5;
-    }
-    .modal-body a {
-      color: #00ff9f;
-      text-decoration: none;
-    }
-    .modal-body a:hover {
-      text-decoration: underline;
-    }
-    /* Botón abrir */
-    .open-btn {
-      position: absolute;
-      top: 2rem;
-      right: 2rem;
-      padding: 0.5rem 1rem;
-      background: #00ff9f;
-      color: #111;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-    .open-btn:hover {
-      background: #00c77a;
-    }
-  </style>
+        .lang {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+        }
+    </style>
 </head>
+
 <body>
+    <header>
+        <h1>$ ls ~/.skills</h1>
+        <p>Here you can seee my hard and soft skills</p>
+    </header>
 
-  <button class="open-btn">Contacto</button>
 
-  <div class="overlay" id="overlay">
-    <div class="modal" id="modal">
-      <div class="modal-header" id="modalHeader">
-        <div class="title">Contacto</div>
-        <div class="close-btn" id="closeBtn">×</div>
-      </div>
-      <div class="modal-body">
-        <p><strong>Teléfono:</strong> +593 9XX XXX XXX</p>
-        <p><strong>Email:</strong> <a href="mailto:tuemail@dominio.com">tuemail@dominio.com</a></p>
-        <p><strong>Twitter:</strong> <a href="https://twitter.com/tuusuario" target="_blank">@tuusuario</a></p>
-        <p><strong>GitHub:</strong> <a href="https://github.com/tuusuario" target="_blank">tuusuario</a></p>
-        <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/tuusuario" target="_blank">tuusuario</a></p>
-      </div>
+    <div class="card">
+        <h2>Languagues</h2>
+        <ul style="list-style: none; padding-left: 0; line-height: 1.6;">
+            <li class="lang">
+
+                <span class="highlight">•</span> 🇺🇸 English (Universiad Politécnica Salesiana)
+                <div class="circle-chart" style="--percent: 70;">
+                    <div class="circle-chart-inner">
+                        <span class="circle-chart-text">B1</span>
+                    </div>
+                </div>
+            </li>
+
+
+            <li class="lang">
+                <span class="highlight">•</span> 🇪🇸 Spanish (Native)
+                <div class="circle-chart" style="--percent: 100;">
+                    <div class="circle-chart-inner">
+                        <span class="circle-chart-text">OK</span>
+                    </div>
+                </div>
+
+        </ul>
+
     </div>
-  </div>
 
-  <script>
-    const overlay = document.getElementById('overlay');
-    const openBtn = document.querySelector('.open-btn');
-    const closeBtn = document.getElementById('closeBtn');
-    const modal = document.getElementById('modal');
-    const header = document.getElementById('modalHeader');
+    <div class="card">
+        <h2>Tech Stack</h2>
 
-    // Abrir modal
-    openBtn.addEventListener('click', () => {
-      overlay.style.display = 'flex';
-    });
-    // Cerrar modal
-    closeBtn.addEventListener('click', () => {
-      overlay.style.display = 'none';
-    });
-    overlay.addEventListener('click', e => {
-      if (e.target === overlay) overlay.style.display = 'none';
-    });
+        <a target="_blank" rel="noopener noreferrer nofollow"
+            href="https://camo.githubusercontent.com/d4cfec9550517aa67567e29843e3880ebf50bd7eeceafcd3b82875f17c9f564e/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f747970657363726970742d2532333030374143432e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d74797065736372697074266c6f676f436f6c6f723d7768697465"><img
+                src="https://camo.githubusercontent.com/d4cfec9550517aa67567e29843e3880ebf50bd7eeceafcd3b82875f17c9f564e/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f747970657363726970742d2532333030374143432e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d74797065736372697074266c6f676f436f6c6f723d7768697465"
+                alt="TypeScript"
+                data-canonical-src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&amp;logo=typescript&amp;logoColor=white"
+                style="max-width: 100%;"></a> <a target="_blank" rel="noopener noreferrer nofollow"
+            href="https://camo.githubusercontent.com/c3fae6b332565bc7cd44261dd5d614329fa051dc5ee6fc4073e7c90dc393a934/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f616e67756c61722d2532334444303033312e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d616e67756c6172266c6f676f436f6c6f723d7768697465"><img
+                src="https://camo.githubusercontent.com/c3fae6b332565bc7cd44261dd5d614329fa051dc5ee6fc4073e7c90dc393a934/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f616e67756c61722d2532334444303033312e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d616e67756c6172266c6f676f436f6c6f723d7768697465"
+                alt="Angular"
+                data-canonical-src="https://img.shields.io/badge/angular-%23DD0031.svg?style=for-the-badge&amp;logo=angular&amp;logoColor=white"
+                style="max-width: 100%;"></a> <a target="_blank" rel="noopener noreferrer nofollow"
+            href="https://camo.githubusercontent.com/d4d9d935f85b68223a3514c6a889ea3ed6a77afb5f560c05baa1a1b168077830/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f68746d6c352d2532334533344632362e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d68746d6c35266c6f676f436f6c6f723d7768697465"><img
+                src="https://camo.githubusercontent.com/d4d9d935f85b68223a3514c6a889ea3ed6a77afb5f560c05baa1a1b168077830/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f68746d6c352d2532334533344632362e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d68746d6c35266c6f676f436f6c6f723d7768697465"
+                alt="HTML5"
+                data-canonical-src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&amp;logo=html5&amp;logoColor=white"
+                style="max-width: 100%;"></a> <a target="_blank" rel="noopener noreferrer nofollow"
+            href="https://camo.githubusercontent.com/930c71eac967cc5cec61c0aa08ba3719f9cb68e28cdffa63b28b0a31be1663b4/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f637373332d2532333135373242362e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d63737333266c6f676f436f6c6f723d7768697465"><img
+                src="https://camo.githubusercontent.com/930c71eac967cc5cec61c0aa08ba3719f9cb68e28cdffa63b28b0a31be1663b4/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f637373332d2532333135373242362e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d63737333266c6f676f436f6c6f723d7768697465"
+                alt="CSS3"
+                data-canonical-src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&amp;logo=css3&amp;logoColor=white"
+                style="max-width: 100%;"></a> <a target="_blank" rel="noopener noreferrer nofollow"
+            href="https://camo.githubusercontent.com/29d02b3669d6450d67e043cf5909e740dcb94c1e2306d88ac48b15b4ec55dc65/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6a6176617363726970742d2532333332333333302e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d6a617661736372697074266c6f676f436f6c6f723d253233463744463145"><img
+                src="https://camo.githubusercontent.com/29d02b3669d6450d67e043cf5909e740dcb94c1e2306d88ac48b15b4ec55dc65/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6a6176617363726970742d2532333332333333302e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d6a617661736372697074266c6f676f436f6c6f723d253233463744463145"
+                alt="JavaScript"
+                data-canonical-src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&amp;logo=javascript&amp;logoColor=%23F7DF1E"
+                style="max-width: 100%;"></a> <a target="_blank" rel="noopener noreferrer nofollow"
+            href="https://camo.githubusercontent.com/09cb6dec4c3c015155fc23fc9af839fd138b29652974a709e8c807d566e9b502/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6b6f746c696e2d2532333746353246462e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d6b6f746c696e266c6f676f436f6c6f723d7768697465"><img
+                src="https://camo.githubusercontent.com/09cb6dec4c3c015155fc23fc9af839fd138b29652974a709e8c807d566e9b502/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6b6f746c696e2d2532333746353246462e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d6b6f746c696e266c6f676f436f6c6f723d7768697465"
+                alt="Kotlin"
+                data-canonical-src="https://img.shields.io/badge/kotlin-%237F52FF.svg?style=for-the-badge&amp;logo=kotlin&amp;logoColor=white"
+                style="max-width: 100%;"></a> <a target="_blank" rel="noopener noreferrer nofollow"
+            href="https://camo.githubusercontent.com/18ecda692c55c21068f0f461e144baf52185fe41c5f1757c01aecabcfb446d2a/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4f43544156452d6461726b626c75653f7374796c653d666f722d7468652d6261646765266c6f676f3d6f6374617665266c6f676f436f6c6f723d666364363833"><img
+                src="https://camo.githubusercontent.com/18ecda692c55c21068f0f461e144baf52185fe41c5f1757c01aecabcfb446d2a/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4f43544156452d6461726b626c75653f7374796c653d666f722d7468652d6261646765266c6f676f3d6f6374617665266c6f676f436f6c6f723d666364363833"
+                alt="Octave"
+                data-canonical-src="https://img.shields.io/badge/OCTAVE-darkblue?style=for-the-badge&amp;logo=octave&amp;logoColor=fcd683"
+                style="max-width: 100%;"></a> <a target="_blank" rel="noopener noreferrer nofollow"
+            href="https://camo.githubusercontent.com/05c34d21791b01055d15a9b9814c71d1da128b6fdd50e674cf1c8cefd7c25bef/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f73776966742d4635344132413f7374796c653d666f722d7468652d6261646765266c6f676f3d7377696674266c6f676f436f6c6f723d7768697465"><img
+                src="https://camo.githubusercontent.com/05c34d21791b01055d15a9b9814c71d1da128b6fdd50e674cf1c8cefd7c25bef/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f73776966742d4635344132413f7374796c653d666f722d7468652d6261646765266c6f676f3d7377696674266c6f676f436f6c6f723d7768697465"
+                alt="Swift"
+                data-canonical-src="https://img.shields.io/badge/swift-F54A2A?style=for-the-badge&amp;logo=swift&amp;logoColor=white"
+                style="max-width: 100%;"></a> <a target="_blank" rel="noopener noreferrer nofollow"
+            href="https://camo.githubusercontent.com/88e1b21c4e11afd4f06cfb2b510dbb3690dbd300fb1a6d4676fd553a70bafa82/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f632b2b2d2532333030353939432e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d63253242253242266c6f676f436f6c6f723d7768697465"><img
+                src="https://camo.githubusercontent.com/88e1b21c4e11afd4f06cfb2b510dbb3690dbd300fb1a6d4676fd553a70bafa82/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f632b2b2d2532333030353939432e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d63253242253242266c6f676f436f6c6f723d7768697465"
+                alt="C++"
+                data-canonical-src="https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&amp;logo=c%2B%2B&amp;logoColor=white"
+                style="max-width: 100%;"></a> <a target="_blank" rel="noopener noreferrer nofollow"
+            href="https://camo.githubusercontent.com/bea90da226e09b503e6c8fde824f4816b98dcf30cd31e803006bf6335af06890/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6a6176612d2532334544384230302e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d6f70656e6a646b266c6f676f436f6c6f723d7768697465"><img
+                src="https://camo.githubusercontent.com/bea90da226e09b503e6c8fde824f4816b98dcf30cd31e803006bf6335af06890/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6a6176612d2532334544384230302e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d6f70656e6a646b266c6f676f436f6c6f723d7768697465"
+                alt="Java"
+                data-canonical-src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&amp;logo=openjdk&amp;logoColor=white"
+                style="max-width: 100%;"></a> <a target="_blank" rel="noopener noreferrer nofollow"
+            href="https://camo.githubusercontent.com/fd00f5fb76a02f6093a50142c52193fa6353f4a1b5199827c57cbe99d611b532/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4e504d2d2532334342333833372e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d6e706d266c6f676f436f6c6f723d7768697465"><img
+                src="https://camo.githubusercontent.com/fd00f5fb76a02f6093a50142c52193fa6353f4a1b5199827c57cbe99d611b532/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4e504d2d2532334342333833372e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d6e706d266c6f676f436f6c6f723d7768697465"
+                alt="NPM"
+                data-canonical-src="https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&amp;logo=npm&amp;logoColor=white"
+                style="max-width: 100%;"></a> <a target="_blank" rel="noopener noreferrer nofollow"
+            href="https://camo.githubusercontent.com/8477a50d7210f0f3bf15fbe5b44809296b75f2101a2927818599d72c8ea72cef/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6e6f64652e6a732d3644413535463f7374796c653d666f722d7468652d6261646765266c6f676f3d6e6f64652e6a73266c6f676f436f6c6f723d7768697465"><img
+                src="https://camo.githubusercontent.com/8477a50d7210f0f3bf15fbe5b44809296b75f2101a2927818599d72c8ea72cef/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6e6f64652e6a732d3644413535463f7374796c653d666f722d7468652d6261646765266c6f676f3d6e6f64652e6a73266c6f676f436f6c6f723d7768697465"
+                alt="NodeJS"
+                data-canonical-src="https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&amp;logo=node.js&amp;logoColor=white"
+                style="max-width: 100%;"></a> <a target="_blank" rel="noopener noreferrer nofollow"
+            href="https://camo.githubusercontent.com/cae1817431b70861395d203211a155f5ca2065ba036d6007c7d424a1fbb7b8d1/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f496f6e69632d2532333338383046462e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d496f6e6963266c6f676f436f6c6f723d7768697465"><img
+                src="https://camo.githubusercontent.com/cae1817431b70861395d203211a155f5ca2065ba036d6007c7d424a1fbb7b8d1/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f496f6e69632d2532333338383046462e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d496f6e6963266c6f676f436f6c6f723d7768697465"
+                alt="Ionic"
+                data-canonical-src="https://img.shields.io/badge/Ionic-%233880FF.svg?style=for-the-badge&amp;logo=Ionic&amp;logoColor=white"
+                style="max-width: 100%;"></a> <a target="_blank" rel="noopener noreferrer nofollow"
+            href="https://camo.githubusercontent.com/e01b1cfdcc52e26519db194c2a7b4b93eafe7a614a0dab69cfe967864a8f1119/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f657870726573732e6a732d2532333430346435392e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d65787072657373266c6f676f436f6c6f723d253233363144414642"><img
+                src="https://camo.githubusercontent.com/e01b1cfdcc52e26519db194c2a7b4b93eafe7a614a0dab69cfe967864a8f1119/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f657870726573732e6a732d2532333430346435392e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d65787072657373266c6f676f436f6c6f723d253233363144414642"
+                alt="Express.js"
+                data-canonical-src="https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&amp;logo=express&amp;logoColor=%2361DAFB"
+                style="max-width: 100%;"></a> <a target="_blank" rel="noopener noreferrer nofollow"
+            href="https://camo.githubusercontent.com/87d97e4553a60edf0a89b98ae7e96ff2293c51ca69754f7b605c342ab0400a7a/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f626f6f7473747261702d2532333835313146412e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d626f6f747374726170266c6f676f436f6c6f723d7768697465"><img
+                src="https://camo.githubusercontent.com/87d97e4553a60edf0a89b98ae7e96ff2293c51ca69754f7b605c342ab0400a7a/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f626f6f7473747261702d2532333835313146412e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d626f6f747374726170266c6f676f436f6c6f723d7768697465"
+                alt="Bootstrap"
+                data-canonical-src="https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&amp;logo=bootstrap&amp;logoColor=white"
+                style="max-width: 100%;"></a> <a target="_blank" rel="noopener noreferrer nofollow"
+            href="https://camo.githubusercontent.com/36e94a150acb3a08e254c12091ef06391f9eaaa9990c68828ab5b49d0afe2d26/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f7765627061636b2d2532333844443646392e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d7765627061636b266c6f676f436f6c6f723d626c61636b"><img
+                src="https://camo.githubusercontent.com/36e94a150acb3a08e254c12091ef06391f9eaaa9990c68828ab5b49d0afe2d26/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f7765627061636b2d2532333844443646392e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d7765627061636b266c6f676f436f6c6f723d626c61636b"
+                alt="Webpack"
+                data-canonical-src="https://img.shields.io/badge/webpack-%238DD6F9.svg?style=for-the-badge&amp;logo=webpack&amp;logoColor=black"
+                style="max-width: 100%;"></a> <a target="_blank" rel="noopener noreferrer nofollow"
+            href="https://camo.githubusercontent.com/6012e634eee518f1a89cb98c191291aa2e4ab7b6b3258c727b8db3d95f831170/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f7961726e2d2532333243384542422e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d7961726e266c6f676f436f6c6f723d7768697465"><img
+                src="https://camo.githubusercontent.com/6012e634eee518f1a89cb98c191291aa2e4ab7b6b3258c727b8db3d95f831170/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f7961726e2d2532333243384542422e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d7961726e266c6f676f436f6c6f723d7768697465"
+                alt="Yarn"
+                data-canonical-src="https://img.shields.io/badge/yarn-%232C8EBB.svg?style=for-the-badge&amp;logo=yarn&amp;logoColor=white"
+                style="max-width: 100%;"></a> <a target="_blank" rel="noopener noreferrer nofollow"
+            href="https://camo.githubusercontent.com/f93e05694a6f01f2f6a37713a454a942442a5ff2b33083891096a6f7e57842f8/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f72656163742d2532333230323332612e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d7265616374266c6f676f436f6c6f723d253233363144414642"><img
+                src="https://camo.githubusercontent.com/f93e05694a6f01f2f6a37713a454a942442a5ff2b33083891096a6f7e57842f8/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f72656163742d2532333230323332612e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d7265616374266c6f676f436f6c6f723d253233363144414642"
+                alt="React"
+                data-canonical-src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&amp;logo=react&amp;logoColor=%2361DAFB"
+                style="max-width: 100%;"></a> <a target="_blank" rel="noopener noreferrer nofollow"
+            href="https://camo.githubusercontent.com/46b1864fcb2994add4798cde0d2b54181ddc58905c827563a2ea8c09a93bffa9/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f456c656374726f6e2d3139313937303f7374796c653d666f722d7468652d6261646765266c6f676f3d456c656374726f6e266c6f676f436f6c6f723d7768697465"><img
+                src="https://camo.githubusercontent.com/46b1864fcb2994add4798cde0d2b54181ddc58905c827563a2ea8c09a93bffa9/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f456c656374726f6e2d3139313937303f7374796c653d666f722d7468652d6261646765266c6f676f3d456c656374726f6e266c6f676f436f6c6f723d7768697465"
+                alt="Electron.js"
+                data-canonical-src="https://img.shields.io/badge/Electron-191970?style=for-the-badge&amp;logo=Electron&amp;logoColor=white"
+                style="max-width: 100%;"></a> <a target="_blank" rel="noopener noreferrer nofollow"
+            href="https://camo.githubusercontent.com/4d79bdeab7a9b036f1b70cd06d4d1e87449c4289882b3252846d3252b5b3e019/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f496e736f6d6e69612d626c61636b3f7374796c653d666f722d7468652d6261646765266c6f676f3d696e736f6d6e6961266c6f676f436f6c6f723d353834394245"><img
+                src="https://camo.githubusercontent.com/4d79bdeab7a9b036f1b70cd06d4d1e87449c4289882b3252846d3252b5b3e019/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f496e736f6d6e69612d626c61636b3f7374796c653d666f722d7468652d6261646765266c6f676f3d696e736f6d6e6961266c6f676f436f6c6f723d353834394245"
+                alt="Insomnia"
+                data-canonical-src="https://img.shields.io/badge/Insomnia-black?style=for-the-badge&amp;logo=insomnia&amp;logoColor=5849BE"
+                style="max-width: 100%;"></a> <a target="_blank" rel="noopener noreferrer nofollow"
+            href="https://camo.githubusercontent.com/38ce4d8be94d27406f2989b56efec7cdc5e2c2d6509600746fede440245c5afa/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6d7973716c2d3434373941312e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d6d7973716c266c6f676f436f6c6f723d7768697465"><img
+                src="https://camo.githubusercontent.com/38ce4d8be94d27406f2989b56efec7cdc5e2c2d6509600746fede440245c5afa/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6d7973716c2d3434373941312e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d6d7973716c266c6f676f436f6c6f723d7768697465"
+                alt="MySQL"
+                data-canonical-src="https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&amp;logo=mysql&amp;logoColor=white"
+                style="max-width: 100%;"></a> <a target="_blank" rel="noopener noreferrer nofollow"
+            href="https://camo.githubusercontent.com/ec9b2bbaccf6915a29050ce24c10cd9b481b0c41b0bf5194add3e69f49a9be3c/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4d6f6e676f44422d2532333465613934622e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d6d6f6e676f6462266c6f676f436f6c6f723d7768697465"><img
+                src="https://camo.githubusercontent.com/ec9b2bbaccf6915a29050ce24c10cd9b481b0c41b0bf5194add3e69f49a9be3c/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4d6f6e676f44422d2532333465613934622e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d6d6f6e676f6462266c6f676f436f6c6f723d7768697465"
+                alt="MongoDB"
+                data-canonical-src="https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&amp;logo=mongodb&amp;logoColor=white"
+                style="max-width: 100%;"></a> <a target="_blank" rel="noopener noreferrer nofollow"
+            href="https://camo.githubusercontent.com/544022edf8369d944e68802fc043b0268484709e334d23db2882590aeae296cb/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f706f7374677265732d2532333331363139322e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d706f737467726573716c266c6f676f436f6c6f723d7768697465"><img
+                src="https://camo.githubusercontent.com/544022edf8369d944e68802fc043b0268484709e334d23db2882590aeae296cb/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f706f7374677265732d2532333331363139322e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d706f737467726573716c266c6f676f436f6c6f723d7768697465"
+                alt="Postgres"
+                data-canonical-src="https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&amp;logo=postgresql&amp;logoColor=white"
+                style="max-width: 100%;"></a> <a target="_blank" rel="noopener noreferrer nofollow"
+            href="https://camo.githubusercontent.com/cbe42388efe7d671afafef98c6b90df20876f51596916dfa242098f1fcb024a3/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f61646f6265253230696c6c7573747261746f722d2532334646394130302e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d61646f6265253230696c6c7573747261746f72266c6f676f436f6c6f723d7768697465"><img
+                src="https://camo.githubusercontent.com/cbe42388efe7d671afafef98c6b90df20876f51596916dfa242098f1fcb024a3/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f61646f6265253230696c6c7573747261746f722d2532334646394130302e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d61646f6265253230696c6c7573747261746f72266c6f676f436f6c6f723d7768697465"
+                alt="Adobe Illustrator"
+                data-canonical-src="https://img.shields.io/badge/adobe%20illustrator-%23FF9A00.svg?style=for-the-badge&amp;logo=adobe%20illustrator&amp;logoColor=white"
+                style="max-width: 100%;"></a> <a target="_blank" rel="noopener noreferrer nofollow"
+            href="https://camo.githubusercontent.com/86e9def5b8ea4baaf6edc890845202c380fe5c19403fd0f3e91a14d5dbf71039/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4d6174706c6f746c69622d2532336666666666662e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d4d6174706c6f746c6962266c6f676f436f6c6f723d626c61636b"><img
+                src="https://camo.githubusercontent.com/86e9def5b8ea4baaf6edc890845202c380fe5c19403fd0f3e91a14d5dbf71039/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4d6174706c6f746c69622d2532336666666666662e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d4d6174706c6f746c6962266c6f676f436f6c6f723d626c61636b"
+                alt="Matplotlib"
+                data-canonical-src="https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&amp;logo=Matplotlib&amp;logoColor=black"
+                style="max-width: 100%;"></a> <a target="_blank" rel="noopener noreferrer nofollow"
+            href="https://camo.githubusercontent.com/201e0e586a865b19eef2e2d271662d9b4304757ff6710b7e4ccebf7b99fe7873/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6e756d70792d2532333031333234332e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d6e756d7079266c6f676f436f6c6f723d7768697465"><img
+                src="https://camo.githubusercontent.com/201e0e586a865b19eef2e2d271662d9b4304757ff6710b7e4ccebf7b99fe7873/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6e756d70792d2532333031333234332e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d6e756d7079266c6f676f436f6c6f723d7768697465"
+                alt="NumPy"
+                data-canonical-src="https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&amp;logo=numpy&amp;logoColor=white"
+                style="max-width: 100%;"></a> <a target="_blank" rel="noopener noreferrer nofollow"
+            href="https://camo.githubusercontent.com/79a70410128d17420de0b730fd3edff68061d5ead17ec305881bad60a1b7fbd6/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f5079546f7263682d2532334545344332432e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d5079546f726368266c6f676f436f6c6f723d7768697465"><img
+                src="https://camo.githubusercontent.com/79a70410128d17420de0b730fd3edff68061d5ead17ec305881bad60a1b7fbd6/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f5079546f7263682d2532334545344332432e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d5079546f726368266c6f676f436f6c6f723d7768697465"
+                alt="PyTorch"
+                data-canonical-src="https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&amp;logo=PyTorch&amp;logoColor=white"
+                style="max-width: 100%;"></a> <a target="_blank" rel="noopener noreferrer nofollow"
+            href="https://camo.githubusercontent.com/9494badd49f215e4673767f9f52725d8401f36802aa41cc110be4b6917bf0d30/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f2d41726475696e6f2d3030393739443f7374796c653d666f722d7468652d6261646765266c6f676f3d41726475696e6f266c6f676f436f6c6f723d7768697465"><img
+                src="https://camo.githubusercontent.com/9494badd49f215e4673767f9f52725d8401f36802aa41cc110be4b6917bf0d30/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f2d41726475696e6f2d3030393739443f7374796c653d666f722d7468652d6261646765266c6f676f3d41726475696e6f266c6f676f436f6c6f723d7768697465"
+                alt="Arduino"
+                data-canonical-src="https://img.shields.io/badge/-Arduino-00979D?style=for-the-badge&amp;logo=Arduino&amp;logoColor=white"
+                style="max-width: 100%;"></a> <a target="_blank" rel="noopener noreferrer nofollow"
+            href="https://camo.githubusercontent.com/87fa957277dd6dd4baa3c76bbfca7a77727094ec9cda4410e6226f8725f176f4/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f426162656c2d4639444333653f7374796c653d666f722d7468652d6261646765266c6f676f3d626162656c266c6f676f436f6c6f723d626c61636b"><img
+                src="https://camo.githubusercontent.com/87fa957277dd6dd4baa3c76bbfca7a77727094ec9cda4410e6226f8725f176f4/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f426162656c2d4639444333653f7374796c653d666f722d7468652d6261646765266c6f676f3d626162656c266c6f676f436f6c6f723d626c61636b"
+                alt="Babel"
+                data-canonical-src="https://img.shields.io/badge/Babel-F9DC3e?style=for-the-badge&amp;logo=babel&amp;logoColor=black"
+                style="max-width: 100%;"></a>
+                <a target="_blank" rel="noopener noreferrer nofollow"
+                href="https://img.shields.io/badge/NestJS-E0234E?style=for-the-badge&logo=nestjs&logoColor=white">
+               <img
+                 src="https://img.shields.io/badge/NestJS-E0234E?style=for-the-badge&logo=nestjs&logoColor=white"
+                 alt="NestJS"
+                 style="max-width: 100%;">
+             </a>
+             
+             <a target="_blank" rel="noopener noreferrer nofollow"
+                href="https://img.shields.io/badge/GraphQL-E10098?style=for-the-badge&logo=graphql&logoColor=white">
+               <img
+                 src="https://img.shields.io/badge/GraphQL-E10098?style=for-the-badge&logo=graphql&logoColor=white"
+                 alt="GraphQL"
+                 style="max-width: 100%;">
+             </a>
+            </p>
 
-    // Drag & Drop
-    let isDragging = false;
-    let offsetX, offsetY;
+            
 
-    header.addEventListener('mousedown', e => {
-      isDragging = true;
-      const rect = modal.getBoundingClientRect();
-      offsetX = e.clientX - rect.left;
-      offsetY = e.clientY - rect.top;
-      document.body.style.userSelect = 'none';
-    });
+    </div>
 
-    document.addEventListener('mouseup', () => {
-      isDragging = false;
-      document.body.style.userSelect = '';
-    });
+    <div class="card">
+        <h2>Soft Skills</h2>
+        <ul style="list-style: none; padding-left: 0; line-height: 1.6;">
+            <li class="lang">
 
-    document.addEventListener('mousemove', e => {
-      if (!isDragging) return;
-      let x = e.clientX - offsetX;
-      let y = e.clientY - offsetY;
-      // límites (opcional)
-      const maxX = window.innerWidth - modal.offsetWidth;
-      const maxY = window.innerHeight - modal.offsetHeight;
-      x = Math.min(Math.max(0, x), maxX);
-      y = Math.min(Math.max(0, y), maxY);
-      modal.style.left = x + 'px';
-      modal.style.top = y + 'px';
-    });
-  </script>
+                <span class="highlight">•</span> 🤝 Teamwork
+            </li>
+
+
+            <li class="lang">
+                <span class="highlight">•</span> 🗣️ Communication
+            </li>
+
+            <li class="lang">
+                <span class="highlight">•</span> 
+                🧘‍♂️ Patience
+            </li>
+
+            <li class="lang">
+                <span class="highlight">•</span> ⏳ Time Management
+            </li>
+
+
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>Github Stats</h2>
+        <img 
+          src="https://github-contribution-stats.vercel.app/api?username=cotbert2&theme=dark&range=year" 
+          alt="GitHub Contribution Calendar of cotbert2" 
+          style="width:30%; max-width:700px; height:auto; display:block; margin:0 auto;"
+        />
+
+
+        
+    </div>
+
+
+    <style>
+        .circle-chart {
+            --size: 40px;
+            --track-color: #333;
+            --fill-color: #00ff9f;
+            --percent: 70;
+
+            margin: 0 1rem;
+
+            width: var(--size);
+            height: var(--size);
+            border-radius: 50%;
+            background:
+                conic-gradient(var(--fill-color) calc(var(--percent) * 1%), var(--track-color) 0%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            font-size: 0.75rem;
+            color: #eee;
+            box-shadow: 0 0 5px rgba(0, 255, 159, 0.2);
+        }
+
+        .circle-chart-inner {
+            width: 75%;
+            height: 75%;
+            border-radius: 50%;
+            background-color: #111;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .circle-chart-text {
+            z-index: 1;
+        }
+    </style>
 
 </body>
+
 </html>
