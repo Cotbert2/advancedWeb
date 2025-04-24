@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mateo García | Hacker Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">Cotbert</div>
+        <ul>
+            <li><a onclick="changeView('home')" href="#" id="home" class="active">Home</a></li>
+            <li><a onclick="changeView('about')" href="#" id="about">About</a></li>
+            <li><a onclick="changeView('skills')" href="#" id="skills">Skills</a></li>
+            <li><a onclick="changeView('projects')" href="#" id="projects">Project</a></li>
+        </ul>
+        <div class="contact-btn">
+            <a href="#" class="open-btn">Contact</a>
+        </div>
+    </nav>
+
+    <div id="root">
+
+
+
+        <div class="container">
+            <div class="main">
+                <div class="intro">
+                    <h2>Hi, I'm</h2>
+                    <h1>Mateo García</h1>
+                    <p class="role-badge">
+                        <span class="icon">🛡️</span>
+                        <span class="text">Ethical Hacker</span>
+                        <span class="divider">|</span>
+                        <span class="text"> 💻 Software Dev</span>
+                    </p>
+                    <p class="subtitle">"Talk is cheaping<br />Show me the code"</p>
+                    <a href="./assets/docs/cv_garcia_mateo.pdf" class="get-started" download="Mateo_Garcia_CV.pdf">
+
+                        <i class="fa-solid fa-download"></i>
+                        Download CV</a>
+                </div>
+                <div class="graphic">
+                    <div class="circle">
+                        <img src="./assets/img/profile.jpeg" class="circle" alt="">
+                        <div class="caption">$ ./showcode.sh</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+        <!--modal-->
+        <div class="overlay" id="overlay">
+            <div class="modal" id="modal">
+                <div class="modal-header" id="modalHeader">
+                    <div class="title">Contacto</div>
+                    <div class="close-btn" id="closeBtn">×</div>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Phone:</strong> +593 963 122 042</p>
+                    <p><strong>Email:</strong> <a href="mateojgdev@gmail.com">mateojgdev@gmail.com</a></p>
+                    <p><strong>Twitter:</strong> <a href="https://twitter.com/cotbert2"
+                            target="_blank">@mateojgarciag</a></p>
+                    <p><strong>GitHub:</strong> <a href="https://github.com/cotbert2" target="_blank">Cotbert2</a></p>
+                    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/mateo-garcia-03b496334/"
+                            target="_blank">mateo-garcia</a></p>
+                </div>
+            </div>
+        </div>
+
+</body>
+
+<script src="./scripts/modal.js"></script>
+<script src="./scripts/main.js"></script>
+
+
+</html>
