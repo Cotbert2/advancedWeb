@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mateo García | Hacker Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Fira Code', monospace;
+            background-color: #111;
+            color: #eee;
+            padding: 2rem;
+        }
+
+        .container {
+
+
+            padding: 3rem;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 4rem;
+        }
+
+        nav .logo {
+            font-size: 1.5rem;
+            color: #00ff9f;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav ul li a {
+            color: #eee;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color .2s;
+        }
+
+        nav ul li a:hover,
+        nav ul li a.active {
+            color: #00ff9f;
+        }
+
+        nav .contact-btn a {
+            padding: .5rem 1rem;
+            background: #00ff9f;
+            color: #111;
+            border-radius: 4px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: background .2s;
+        }
+
+        nav .contact-btn a:hover {
+            background: #00c77a;
+        }
+
+        .main {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .intro h2 {
+            font-size: 2rem;
+            color: #00ff9f;
+            margin-bottom: 1rem;
+            width: 25rem;
+        }
+
+
+
+        .intro .subtitle {
+            font-size: 1.2rem;
+            color: #aaa;
+            margin-bottom: 2rem;
+        }
+
+        .intro .get-started {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background: #00ff9f;
+            color: #111;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background .2s, transform .2s;
+        }
+
+        .intro .get-started:hover {
+            background: #00c77a;
+            transform: translateY(-2px);
+        }
+
+        .graphic {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .circle {
+            width: 500px;
+            height: 500px;
+            border: 2px solid #2adc42;
+            border-radius: 50%;
+            background: rgba(255, 85, 85, 0.1);
+            position: relative;
+        }
+
+        .circle .caption {
+            position: absolute;
+            bottom: -2.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #00ff9f;
+            font-size: 0.9rem;
+        }
+
+        @media(max-width: 900px) {
+            .main {
+                flex-direction: column;
+                gap: 3rem;
+            }
+
+            .circle {
+                width: 250px;
+                height: 250px;
+            }
+        }
+
+        nav {
+            position: relative;
+        }
+
+        nav::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -20px;
+            width: 100%;
+            height: 2px;
+            background: #00ff9f;
+            box-shadow: 0 0 10px rgba(0, 255, 159, 0.6),
+                0 0 20px rgba(0, 255, 159, 0.4),
+                0 0 30px rgba(0, 255, 159, 0.2);
+        }
+
+        .intro h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            width: 14ch;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 2px solid #00ff9f;
+            animation: typing 3s steps(13);
+            /* solo typing */
+
+            /* cursor */
+            animation: typing 3s steps(14), blink 0.75s step-end infinite;
+        }
+
+        /* Animación de escritura */
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 14ch;
+            }
+        }
+
+        @keyframes blink {
+            50% {
+                border-color: transparent;
+            }
+        }
+
+
+        .role-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.4rem 0.8rem;
+            background: rgba(0, 255, 159, 0.1);
+            border: 1px solid #00ff9f;
+            border-radius: 1rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #00ff9f;
+            letter-spacing: 0.5px;
+            margin-bottom: 1.5rem;
+        }
+
+        .role-badge .icon {
+            font-size: 1.1rem;
+        }
+
+        .role-badge .divider {
+            color: #00ff9f;
+            opacity: 0.6;
+        }
+
+
+        nav ul li {
+  position: relative; /* Para posicionar el pseudo-elemento */
+}
+
+nav ul li a {
+  position: relative;
+  z-index: 1; /* Para que el texto esté sobre la línea */
+  transition: color 0.3s ease;
+}
+
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;            /* Separación de la línea */
+  width: 0%;
+  height: 2px;
+  background: #00ff9f;
+  transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after,
+nav ul li a.active::after {
+  width: 100%;
+}
+
+nav ul li a:hover {
+  color: #00ff9f;
+  transform: translateY(-2px);
+}
+
+nav ul li:hover {
+  transform: translateY(-2px);
+  transition: transform 0.3s ease;
+}
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">Cotbert</div>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Skills</a></li>
+            <li><a href="#">Portfolio</a></li>
+        </ul>
+        <div class="contact-btn">
+            <a href="#" class="open-btn">Contact</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="main">
+            <div class="intro">
+                <h2>Hi, I'm</h2>
+                <h1>Mateo García</h1>
+                <p class="role-badge">
+                    <span class="icon">🛡️</span>
+                    <span class="text">Ethical Hacker</span>
+                    <span class="divider">|</span>
+                    <span class="text"> 💻 Software Dev</span>
+                </p>
+                <p class="subtitle">"Talk is cheaping<br />Show me the code"</p>
+                <a href="#" class="get-started">Get Started</a>
+            </div>
+            <div class="graphic">
+                <div class="circle">
+                    <img src="./assets/img/profile.jpeg" class="circle" alt="">
+                    <div class="caption">$ ./showcode.sh</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!--modal-->
+    <div class="overlay" id="overlay">
+        <div class="modal" id="modal">
+          <div class="modal-header" id="modalHeader">
+            <div class="title">Contacto</div>
+            <div class="close-btn" id="closeBtn">×</div>
+          </div>
+          <div class="modal-body">
+            <p><strong>Phone:</strong> +593 963 122 042</p>
+            <p><strong>Email:</strong> <a href="mateojgdev@gmail.com">mateojgdev@gmail.com</a></p>
+            <p><strong>Twitter:</strong> <a href="https://twitter.com/cotbert2" target="_blank">@mateojgarciag</a></p>
+            <p><strong>GitHub:</strong> <a href="https://github.com/cotbert2" target="_blank">Cotbert2</a></p>
+            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/mateo-garcia-03b496334/" target="_blank">mateo-garcia</a></p>
+          </div>
+        </div>
+      </div>
+
+
+      <!--styles for modal-->
+        <style>
+
+    /* Overlay */
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 10;
+    }
+    /* Modal ventana */
+    .modal {
+      width: 300px;
+      background: #222;
+      border: 2px solid #00ff9f;
+      border-radius: 4px;
+      box-shadow: 0 0 10px rgba(0,255,159,0.5);
+      position: absolute;
+      top: 100px;
+      left: calc(50% - 150px);
+      cursor: move;
+    }
+    /* Barra título */
+    .modal-header {
+      background: #00ff9f;
+      color: #111;
+      padding: 0.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      user-select: none;
+    }
+    .modal-header .title {
+      font-weight: bold;
+    }
+    .modal-header .close-btn {
+      cursor: pointer;
+      font-weight: bold;
+      padding: 0 0.5rem;
+    }
+    /* Contenido */
+    .modal-body {
+      padding: 1rem;
+      line-height: 1.5;
+    }
+    .modal-body a {
+      color: #00ff9f;
+      text-decoration: none;
+    }
+    .modal-body a:hover {
+      text-decoration: underline;
+    }
+    /* Botón abrir */
+
+  </style>
+
+  
+
+</body>
+
+
+
+
+<script>
+    const overlay = document.getElementById('overlay');
+    const openBtn = document.querySelector('.open-btn');
+    const closeBtn = document.getElementById('closeBtn');
+    const modal = document.getElementById('modal');
+    const header = document.getElementById('modalHeader');
+
+    //open modal
+    openBtn.addEventListener('click', () => {
+      overlay.style.display = 'flex';
+    });
+    //close modal
+    closeBtn.addEventListener('click', () => {
+      overlay.style.display = 'none';
+    });
+    overlay.addEventListener('click', e => {
+      if (e.target === overlay) overlay.style.display = 'none';
+    });
+
+    // Drag
+    let isDragging = false;
+    let offsetX, offsetY;
+
+    header.addEventListener('mousedown', e => {
+      isDragging = true;
+      const rect = modal.getBoundingClientRect();
+      offsetX = e.clientX - rect.left;
+      offsetY = e.clientY - rect.top;
+      document.body.style.userSelect = 'none';
+    });
+
+    document.addEventListener('mouseup', () => {
+      isDragging = false;
+      document.body.style.userSelect = '';
+    });
+
+    document.addEventListener('mousemove', e => {
+      if (!isDragging) return;
+      let x = e.clientX - offsetX;
+      let y = e.clientY - offsetY;
+      // límites (opcional)
+      const maxX = window.innerWidth - modal.offsetWidth;
+      const maxY = window.innerHeight - modal.offsetHeight;
+      x = Math.min(Math.max(0, x), maxX);
+      y = Math.min(Math.max(0, y), maxY);
+      modal.style.left = x + 'px';
+      modal.style.top = y + 'px';
+    });
+  </script>
+
+
+
+</html>

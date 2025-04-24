@@ -1,0 +1,26 @@
+Hello strange, my name is Mateo García, but U can call me Cotbert.
+In the complex task of try to undested what means "whoami" let me tell you a little about me.
+
+
+I found myself in the IT world when I was 15 years old, when I started to learn about programming and technology.
+I started at 2020 pandmeic, when I was in high school, and I started to learn about programming with Java, then i fell in love with different branches of development.
+I go through desktop applications, web development, mobile applications, embedded systems and then I found another passion: cybersecurity.
+I started developing malware and pentesting, I found my first vulnerability when I was 16.
+My porpouse is to learn as much as I can about technology and programming, and to be able to share that knowledge with others.
+I am a passionate developer, always looking for new challenges and opportunities to grow.
+
+
+
+Experience:
+- I have teached programming to high school students into the "Unidad Educativa Don Bosco"
+- I have worked as a freelance developer, creating applications for different necessities or even contributing to open source community.
+- I have published free mobile applications on the Play Store like "Visual Morse"
+- I have worked as a fullstack web developer, into AtiJaguar LTDA, enrolling in some projects for companies like "Municipo de Quito" and "Ministerio del Ambiente" (july 2022 - present)
+
+Las condiciones contemporaneas de la vida no son llevaderas a largo, la tecnologia es una herramienta que nos permite progresar sin eemabrgo la liberatad bajo la misma se ve envuelta por contaminacion y acceso solo a aquellos que tiene recursos bajo el sesgo material.
+Mi objetivo de vida es cambiar al a mundo aportando desde lo minimo con la intencion de lograr un cambio significativo en la vida de las personas. Asi mismo como el respeto a la vida animal y la consientizacion de la reproducción, siguiendo los principios del Objetivismo propuestos por Ayn Rand.
+
+The current conditions of life are not bearable in the long run, technology is a tool that allows us to progress, however, freedom under it is surrounded by pollution and access only to those who have resources under the material bias.
+My life goal is to change the world by contributing from the minimum with the intention of achieving a significant change in people's lives. Likewise, respect for animal life and awareness of reproduction, following the principles of Objectivism proposed by Ayn Rand.
+
+

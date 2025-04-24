@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Modal Linux Style</title>
+  <style>
+    body {
+      font-family: 'Fira Code', monospace;
+      background: #111;
+      color: #eee;
+      height: 100vh;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+    }
+    /* Overlay */
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 10;
+    }
+    /* Modal ventana */
+    .modal {
+      width: 300px;
+      background: #222;
+      border: 2px solid #00ff9f;
+      border-radius: 4px;
+      box-shadow: 0 0 10px rgba(0,255,159,0.5);
+      position: absolute;
+      top: 100px;
+      left: calc(50% - 150px);
+      cursor: move;
+    }
+    /* Barra título */
+    .modal-header {
+      background: #00ff9f;
+      color: #111;
+      padding: 0.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      user-select: none;
+    }
+    .modal-header .title {
+      font-weight: bold;
+    }
+    .modal-header .close-btn {
+      cursor: pointer;
+      font-weight: bold;
+      padding: 0 0.5rem;
+    }
+    /* Contenido */
+    .modal-body {
+      padding: 1rem;
+      line-height: 1.5;
+    }
+    .modal-body a {
+      color: #00ff9f;
+      text-decoration: none;
+    }
+    .modal-body a:hover {
+      text-decoration: underline;
+    }
+    /* Botón abrir */
+    .open-btn {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      padding: 0.5rem 1rem;
+      background: #00ff9f;
+      color: #111;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .open-btn:hover {
+      background: #00c77a;
+    }
+  </style>
+</head>
+<body>
+
+  <button class="open-btn">Contacto</button>
+
+  <div class="overlay" id="overlay">
+    <div class="modal" id="modal">
+      <div class="modal-header" id="modalHeader">
+        <div class="title">Contacto</div>
+        <div class="close-btn" id="closeBtn">×</div>
+      </div>
+      <div class="modal-body">
+        <p><strong>Teléfono:</strong> +593 9XX XXX XXX</p>
+        <p><strong>Email:</strong> <a href="mailto:tuemail@dominio.com">tuemail@dominio.com</a></p>
+        <p><strong>Twitter:</strong> <a href="https://twitter.com/tuusuario" target="_blank">@tuusuario</a></p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/tuusuario" target="_blank">tuusuario</a></p>
+        <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/tuusuario" target="_blank">tuusuario</a></p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const overlay = document.getElementById('overlay');
+    const openBtn = document.querySelector('.open-btn');
+    const closeBtn = document.getElementById('closeBtn');
+    const modal = document.getElementById('modal');
+    const header = document.getElementById('modalHeader');
+
+    // Abrir modal
+    openBtn.addEventListener('click', () => {
+      overlay.style.display = 'flex';
+    });
+    // Cerrar modal
+    closeBtn.addEventListener('click', () => {
+      overlay.style.display = 'none';
+    });
+    overlay.addEventListener('click', e => {
+      if (e.target === overlay) overlay.style.display = 'none';
+    });
+
+    // Drag & Drop
+    let isDragging = false;
+    let offsetX, offsetY;
+
+    header.addEventListener('mousedown', e => {
+      isDragging = true;
+      const rect = modal.getBoundingClientRect();
+      offsetX = e.clientX - rect.left;
+      offsetY = e.clientY - rect.top;
+      document.body.style.userSelect = 'none';
+    });
+
+    document.addEventListener('mouseup', () => {
+      isDragging = false;
+      document.body.style.userSelect = '';
+    });
+
+    document.addEventListener('mousemove', e => {
+      if (!isDragging) return;
+      let x = e.clientX - offsetX;
+      let y = e.clientY - offsetY;
+      // límites (opcional)
+      const maxX = window.innerWidth - modal.offsetWidth;
+      const maxY = window.innerHeight - modal.offsetHeight;
+      x = Math.min(Math.max(0, x), maxX);
+      y = Math.min(Math.max(0, y), maxY);
+      modal.style.left = x + 'px';
+      modal.style.top = y + 'px';
+    });
+  </script>
+
+</body>
+</html>

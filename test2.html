@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hacker Style Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Fira Code', monospace;
+      background-color: #111;
+      color: #eee;
+      padding: 2rem;
+    }
+    .container {
+      max-width: 1000px;
+      margin: auto;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+    header h1 {
+      font-size: 3rem;
+      color: #00ff9f;
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #aaa;
+    }
+    .highlight {
+      color: #00ff9f;
+    }
+    .card {
+      background: #1a1a1a;
+      padding: 1.5rem;
+      border-radius: 10px;
+      margin-bottom: 2rem;
+      box-shadow: 0 0 15px rgba(0, 255, 159, 0.1);
+      transition: 0.3s ease-in-out;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 25px rgba(0, 255, 159, 0.3);
+    }
+    .card h2 {
+      margin-bottom: 1rem;
+      color: #00ff9f;
+    }
+    .cta {
+      text-align: center;
+      margin-top: 3rem;
+    }
+    .cta a {
+      color: #111;
+      background-color: #00ff9f;
+      padding: 0.8rem 2rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .cta a:hover {
+      background-color: #00c77a;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>$ whoami</h1>
+      <p>Hello, I’m <span class="highlight">Alex Root</span>, a passionate hacker-style front-end developer.</p>
+    </header>
+
+    <section class="card">
+      <h2>$ cat ./about.txt</h2>
+      <p>I design and code beautifully simple things, and I love what I do. With over 10 years of experience, my work is efficient, minimal, and clean.</p>
+    </section>
+
+    <section class="card">
+      <h2>$ ls /projects</h2>
+      <p>- Terminal Portfolio<br>- CyberSec Landing Page<br>- DevOps Dashboard UI</p>
+    </section>
+
+    <section class="card">
+      <h2>$ cat ./experience</h2>
+      <p>- Front-End Developer @ NightSec (2020 - Present)<br>- UI Designer @ HackLabs (2017 - 2020)</p>
+    </section>
+
+    <div class="cta">
+      <a href="#">$ ./contactme.sh</a>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio Linux Theme</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+  
+
+  
+  <style>
+    body {
+      background: url('./01-portfolio/src/assets/img/pexels-kevin-ku-92347-577585.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #00ff00;
+      font-family: 'Fira Code', monospace;
+      margin: 0;
+      padding: 2rem;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .section {
+      margin-bottom: 4rem;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 1rem;
+      border-radius: 8px;
+    }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+    .card {
+      background-color: #111;
+      padding: 1rem;
+      border: 1px solid #333;
+      border-radius: 8px;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      background-color: #111;
+      border: 1px solid #333;
+      color: #00ff00;
+    }
+    button {
+      background-color: #00ff00;
+      color: black;
+      padding: 0.5rem 1rem;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 4px;
+    }
+    footer {
+      text-align: center;
+      color: #aaa;
+      margin-top: 4rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- $whoami -->
+  <section class="section">
+    <h1>$ whoami</h1>
+    <p>Soy un desarrollador apasionado por la tecnología, el espacio y la ciberseguridad. Me especializo en construir soluciones eficientes y seguras usando herramientas modernas.</p>
+  </section>
+
+  <!-- $ls /projects -->
+  <section class="section">
+    <h1>$ ls /projects</h1>
+    <div class="projects">
+      <div class="card">
+        <h2>Proyecto #1</h2>
+        <p>Descripción breve del proyecto con enfoque en funcionalidad y seguridad.</p>
+      </div>
+      <div class="card">
+        <h2>Proyecto #2</h2>
+        <p>Descripción breve del proyecto con enfoque en funcionalidad y seguridad.</p>
+      </div>
+      <div class="card">
+        <h2>Proyecto #3</h2>
+        <p>Descripción breve del proyecto con enfoque en funcionalidad y seguridad.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- $cat ./experience -->
+  <section class="section">
+    <h1>$ cat ./experience</h1>
+    <ul>
+      <li>Desarrollador backend - Empresa X (2023 - Presente)</li>
+      <li>Auditor de seguridad - Empresa Y (2021 - 2023)</li>
+    </ul>
+  </section>
+
+  <!-- $./contactme.sh -->
+  <section class="section">
+    <h1>$ ./contactme.sh</h1>
+    <form>
+      <input type="text" placeholder="Nombre" required>
+      <input type="email" placeholder="Correo electrónico" required>
+      <textarea rows="4" placeholder="Mensaje" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <!-- Botón de descarga de CV -->
+  <section class="section" style="text-align: center;">
+    <a href="cv.pdf" download><button>Descargar CV</button></a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>🖥️ Portfolio Linux Theme · Inspirado en ciberseguridad y espacio</p>
+  </footer>
+</body>
+</html>

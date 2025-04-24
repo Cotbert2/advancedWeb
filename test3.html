@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mateo García | Hacker Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Fira Code', monospace;
+      background-color: #111;
+      color: #eee;
+      padding: 2rem;
+    }
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      border: 2px solid #00ff9f;
+      padding: 1.5rem;
+      position: relative;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 4rem;
+    }
+    nav .logo {
+      font-size: 1.5rem;
+      color: #00ff9f;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+    nav ul li a {
+      color: #eee;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: color .2s;
+    }
+    nav ul li a:hover,
+    nav ul li a.active {
+      color: #00ff9f;
+    }
+    nav .contact-btn a {
+      padding: .5rem 1rem;
+      background: #00ff9f;
+      color: #111;
+      border-radius: 4px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background .2s;
+    }
+    nav .contact-btn a:hover {
+      background: #00c77a;
+    }
+
+    .main {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .intro {
+      flex: 1;
+    }
+    .intro h2 {
+      font-size: 2rem;
+      color: #00ff9f;
+      margin-bottom: 1rem;
+    }
+    .intro h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .intro .subtitle {
+      font-size: 1.2rem;
+      color: #aaa;
+      margin-bottom: 2rem;
+    }
+    .intro .get-started {
+      display: inline-block;
+      padding: 0.8rem 2rem;
+      background: #00ff9f;
+      color: #111;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background .2s, transform .2s;
+    }
+    .intro .get-started:hover {
+      background: #00c77a;
+      transform: translateY(-2px);
+    }
+
+    .graphic {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .circle {
+      width: 300px;
+      height: 300px;
+      border: 2px solid #ff5555;
+      border-radius: 50%;
+      background: rgba(255,85,85,0.1);
+      position: relative;
+    }
+    .circle .caption {
+      position: absolute;
+      bottom: -2.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #00ff9f;
+      font-size: 0.9rem;
+    }
+
+    @media(max-width: 900px) {
+      .main {
+        flex-direction: column;
+        gap: 3rem;
+      }
+      .circle {
+        width: 250px;
+        height: 250px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <div class="logo">Cotbert</div>
+      <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Skills</a></li>
+        <li><a href="#">Portfolio</a></li>
+      </ul>
+      <div class="contact-btn">
+        <a href="#">Contact</a>
+      </div>
+    </nav>
+
+    <div class="main">
+      <div class="intro">
+        <h2>Hi, I'm</h2>
+        <h1>Mateo García</h1>
+        <p class="subtitle">Telltale is cheaping<br/>Show me the code</p>
+        <a href="#" class="get-started">Get Started</a>
+      </div>
+      <div class="graphic">
+        <div class="circle">
+          <div class="caption">$ ./showcode.sh</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
