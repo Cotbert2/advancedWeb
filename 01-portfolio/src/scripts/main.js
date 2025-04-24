@@ -599,7 +599,7 @@ const projectsComponent = () => `
             <i class="devicon-ruby-plain"></i>
 
           </div>
-          <a href="https://github.com/tuusuario/proyecto-one" target="_blank" class="github-link">
+          <a href="https://github.com/Cotbert2/mutltitax" target="_blank" class="github-link">
             <i class="devicon-github-original"></i> GitHub</a>
         </div>
       </div>
