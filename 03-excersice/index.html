@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="nav">
+        
+        <!--nav bar example-->
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="services.html">Services</a>
+            <a href="portfolio.html">Portfolio</a>
+        </ul>
+    </nav>
+
+    <div class="content">
+
+    </div>
+</body>
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    nav {
+        background-color: #333;
+        display: flex;
+        justify-content: center;
+        color: white;
+        padding: 10px;
+        position: fixed;
+        width: 100%;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        padding: 14px 20px;
+        text-align: center;
+    }
+
+    @media (max-width: 600px) {
+
+         nav{
+            display: none;
+         }
+
+         button {
+            display: inline;
+         }
+
+    }
+
+    @media (min-width: 601px) {
+        nav {
+            display: flex;
+        }
+
+        button {
+            display: none;
+        }
+    }
+
+
+    button{
+        padding: 1rem;
+        border-radius: 1rem;
+        background-color: #333;
+        color: white;
+    }
+    button img {
+        width: 2rem;
+        height: 2rem;
+    }
+</style>
+
+<script>
+
+    const hamburger = document.getElementById('hamburger');
+    const nav = document.querySelector('nav');
+    hamburger.addEventListener('click', () => {
+        if (nav.style.display === 'none' || nav.style.display === '') {
+            nav.style.display = 'flex';
+        } else {
+            nav.style.display = 'none';
+        }
+    });
+
+</script>
+
+</html>
