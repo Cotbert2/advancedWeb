@@ -1,0 +1,101 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+nav .logo {
+    font-size: 1.5rem;
+    color: #00ff9f;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+nav ul li a {
+    color: #eee;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color .2s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #00ff9f;
+}
+
+nav .contact-btn a {
+    padding: .5rem 1rem;
+    background: #00ff9f;
+    color: #111;
+    border-radius: 4px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background .2s;
+}
+
+nav .contact-btn a:hover {
+    background: #00c77a;
+}
+
+nav {
+    position: relative;
+}
+
+nav::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+    width: 100%;
+    height: 2px;
+    background: #00ff9f;
+    box-shadow: 0 0 10px rgba(0, 255, 159, 0.6),
+        0 0 20px rgba(0, 255, 159, 0.4),
+        0 0 30px rgba(0, 255, 159, 0.2);
+}
+
+
+
+nav ul li {
+    position: relative;
+    /* Para posicionar el pseudo-elemento */
+}
+
+nav ul li a {
+    position: relative;
+    z-index: 1;
+    /* Para que el texto esté sobre la línea */
+    transition: color 0.3s ease;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    /* Separación de la línea */
+    width: 0%;
+    height: 2px;
+    background: #00ff9f;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after,
+nav ul li a.active::after {
+    width: 100%;
+}
+
+nav ul li a:hover {
+    color: #00ff9f;
+    transform: translateY(-2px);
+}
+
+nav ul li:hover {
+    transform: translateY(-2px);
+    transition: transform 0.3s ease;
+}

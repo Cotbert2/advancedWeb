@@ -1,0 +1,44 @@
+@if (isModalVisible) {
+    <div class="overlay" 
+        [style.display]="isModalVisible ? 'flex' : 'none'" 
+        (click)="onOverlayClick($event)"
+        id="overlay">
+        
+    <div class="modal" 
+        id="modal"
+        [ngStyle]="{'left.px': modalPosition.x, 'top.px': modalPosition.y}"
+        (mousedown)="onMouseDown($event)"
+        (mouseup)="onMouseUp()"
+        (mousemove)="onMouseMove($event)">
+        <div class="modal-header" id="modalHeader">
+        <div class="title">Contacto</div>
+        <div class="close-btn" id="closeBtn" (click)="closeModal()">×</div>
+        </div>
+
+        <div class="modal-body">
+        <p><strong>Phone:</strong> +593 963 122 042</p>
+        <p><strong>Email:</strong> 
+            <a href="mailto:mateojgdev@gmail.com">
+                {{
+                    'mateojgdev@gmail.com'
+                }}
+                
+            </a>
+        </p>
+        <p><strong>X:</strong> 
+            <a href="https://x.com/MateoGa94160193" target="_blank">
+                {{
+                    '@mateojgarciag'
+                }}</a>
+        </p>
+        <p><strong>GitHub:</strong> 
+            <a href="https://github.com/cotbert2" target="_blank">Cotbert2</a>
+        </p>
+        <p><strong>LinkedIn:</strong> 
+            <a href="https://www.linkedin.com/in/mateo-garcia-03b496334/" target="_blank">mateo-garcia</a>
+        </p>
+        </div>
+
+    </div>
+    </div>
+}

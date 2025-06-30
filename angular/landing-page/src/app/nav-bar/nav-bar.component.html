@@ -1,0 +1,17 @@
+    <nav>
+        <div class="logo">Cotbert</div>
+        <ul>
+            <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a></li>
+            <li><a routerLink="/about" routerLinkActive="active">About</a></li>
+            <li><a routerLink="/skills" routerLinkActive="active">Skills</a></li>
+            <li><a routerLink="/projects" routerLinkActive="active">Projects</a></li>
+        </ul>
+        <div class="contact-btn">
+            <a (click)="handleModal()" class="open-btn">Contact</a>
+        </div>
+    </nav>
+
+    <app-modal 
+    [isModalVisible]="showModal"
+    (close)="handleModal()"
+    />

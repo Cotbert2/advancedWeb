@@ -1,0 +1,46 @@
+@use './../../shared/common-styles.scss';
+
+
+
+
+
+
+
+
+
+
+.circle-chart {
+    --size: 40px;
+    --track-color: #333;
+    --fill-color: #00ff9f;
+    --percent: 70;
+
+    margin: 0 1rem;
+
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    background:
+        conic-gradient(var(--fill-color) calc(var(--percent) * 1%), var(--track-color) 0%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-size: 0.75rem;
+    color: #eee;
+    box-shadow: 0 0 5px rgba(0, 255, 159, 0.2);
+}
+
+.circle-chart-inner {
+    width: 75%;
+    height: 75%;
+    border-radius: 50%;
+    background-color: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle-chart-text {
+    z-index: 1;
+}

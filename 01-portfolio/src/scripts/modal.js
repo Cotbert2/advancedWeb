@@ -4,7 +4,7 @@ const closeBtn = document.getElementById('closeBtn');
 const modal = document.getElementById('modal');
 const header = document.getElementById('modalHeader');
 
-//open modal
+
 openBtn.addEventListener('click', () => {
     overlay.style.display = 'flex';
 });
