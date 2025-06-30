@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { IAbout } from '../../../../interfaces';
+import { IAbout } from '../../../../models';
 
 @Component({
   selector: 'app-about-item',

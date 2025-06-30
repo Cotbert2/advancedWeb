@@ -1,7 +1,5 @@
-  <div class="container-boot">
-
-    <div id="console"></div>
-
-    <script src="./scripts/boot.js"></script>
-
+<div id="console" class="console">
+  <div *ngFor="let line of visibleLines" [ngClass]="getClass(line)" class="line">
+    {{ line }}
   </div>
+</div>

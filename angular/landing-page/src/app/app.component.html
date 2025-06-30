@@ -1,5 +1,16 @@
-<app-nav-bar/>
+@if (!isBooting()) {
 
-<div id="root">
-  <router-outlet />
-</div>
+  <div class="body-main">
+
+    <app-nav-bar/>
+    
+    <div id="root">
+      <router-outlet />
+    </div>
+  </div>
+} @else {
+  <div class="body-boot">
+
+    <app-boot/>
+  </div>
+}

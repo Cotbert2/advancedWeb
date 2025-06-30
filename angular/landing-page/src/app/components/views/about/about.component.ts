@@ -1,6 +1,6 @@
 import { Component, OnInit, Signal } from '@angular/core';
 import { AboutItemComponent } from "./about-item/about-item.component";
-import { IAbout } from '../../../interfaces/IAbout';
+import { IAbout } from '../../../models/IAbout';
 import { PersonalDataService } from '../../../services/personal-data.service';
 
 @Component({

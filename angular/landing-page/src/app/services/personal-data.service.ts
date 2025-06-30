@@ -1,5 +1,5 @@
 import { Injectable, signal, Signal } from '@angular/core';
-import { IAbout, IProjectData } from '../interfaces';
+import { IAbout, IProjectData } from '../models';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +14,8 @@ export class PersonalDataService {
     return  [
       {
         title: "Minex",
-        description: "Multitax is a cross-platform application, helping (fictional) Minex employees to handle and manage their Mars exploration.",
+        description: `Multitax is a cross-platform application, helping (fictional) Minex employees to handle and manage their Mars exploration
+        \n`,
         technologies: [
           "devicon-typescript-plain",
           "devicon-sass-original",
@@ -52,7 +53,10 @@ export class PersonalDataService {
       },
       {
         title: "Jackson Store",
-        description: "A complete e-commerce system teemplate for a fictional store. It includes a complete backend and frontend system, with a database and a complete API. The project aims to use top-use new technologies and frameworks, such as Angular,  GraphQL, Nest JS and MongoDB.",
+        description: `A complete e-commerce system teemplate for a fictional store. 
+        It includes a complete backend and frontend system, with a database and a complete API. 
+        The project aims to use top-use new technologies and frameworks, such as Angular,  GraphQL, Nest JS and MongoDB.
+        `,
         technologies: [
           "devicon-nestjs-plain",
           "devicon-mongodb-plain",

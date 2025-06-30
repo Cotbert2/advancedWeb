@@ -1,59 +1,54 @@
-# LandingPage
+# 💼 My Developer Portfolio
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.6.
+Welcome to my personal developer portfolio! 🚀
 
-## Development server
+This project showcases who I am, what I’ve built, and what I can offer as a developer. Through this site, I aim to give visitors an interactive and visually engaging experience of my professional profile — including my background, projects, skills, and contact information.
 
-To start a local development server, run:
+## 📜 About This Portfolio
 
+I started this project to have a central place to share my work, my interests in technology, and my journey through software development. From high school experiments with code to more refined university projects, every section of this site reflects my growth and passion for tech.
+
+### 🔍 Sections Included:
+- **$whoami**: A brief personal introduction.
+- **$tree ./projects**: A visual listing of my projects and technologies used.
+- **$cat ./experience**: A summary of my background and skills.
+- **$./contactme.sh**: Simple and direct ways to get in touch with me.
+
+Each section draws inspiration from Linux commands — reflecting my comfort with the command line and a hacker-style aesthetic. The UI design mimics a terminal environment, blended with dark mode styling and lightweight SVG icons for a sleek and modern experience.
+
+## 🧪 Technologies Used
+
+- **Angular** – Main framework for building the app.
+- **TypeScript** – For type-safe, scalable frontend logic.
+- **HTML/CSS** – Custom styling and responsive layout.
+- **PrimeNG** – For UI components.
+- **Devicon** – For technology stack icons.
+- **SCSS** – To maintain modular and maintainable styles.
+- **Signals** – Angular’s reactive approach to state management in the latest version.
+
+## 🎯 Why Angular?
+
+This project was specifically developed using **Angular** due to a university requirement for a course. While I believe Angular is a powerful framework — especially for building complex, enterprise-level applications — it may not be the most suitable or lightweight choice for a personal portfolio like this one.
+
+Frameworks like **React**, **Vue**, or even **static site generators** like **Astro** or **Next.js** would typically be better suited for this type of site, offering faster load times, better performance for static content, and simpler build processes. However, fulfilling the academic requirement gave me the chance to dive deeper into Angular and challenge myself to create a performant, well-structured application under those constraints.
+
+
+## 🔧 Setup Instructions
+
+1. Clone the repo:
 ```bash
-ng serve
+git clone https://github.com/Cotbert2/advancedWeb
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
+2. Navigate to the project directory:
 ```bash
-ng generate component component-name
+cd advancedWeb/angular/landing-page
 ```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
+3. Install dependencies:
 ```bash
-ng generate --help
+yarn install
 ```
-
-## Building
-
-To build the project run:
-
+4. Start the development server:
 ```bash
-ng build
+yarn ng serve
 ```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.

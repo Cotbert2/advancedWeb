@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { IProjectData } from '../../../../interfaces';
+import { IProjectData } from '../../../../models';
 
 @Component({
   selector: 'app-project-card',

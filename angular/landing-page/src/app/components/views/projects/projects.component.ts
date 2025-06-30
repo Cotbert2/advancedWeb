@@ -1,12 +1,12 @@
 import { Component, OnInit, Signal } from '@angular/core';
-import { IProjectData } from '../../../interfaces';
+import { IProjectData } from '../../../models';
 import { ProjectCardComponent } from "./project-card/project-card.component";
 import { AboutComponent } from "../about/about.component";
 import { PersonalDataService } from '../../../services/personal-data.service';
 
 @Component({
   selector: 'app-projects',
-  imports: [ProjectCardComponent, AboutComponent],
+  imports: [ProjectCardComponent],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss'
 })
