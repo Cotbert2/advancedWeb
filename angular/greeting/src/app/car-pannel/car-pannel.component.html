@@ -1,0 +1,12 @@
+<app-car-card
+[carName]="currentCar.name"
+[carImage]="currentCar.image"
+[carPrice]="currentCar.price"
+[carDescription]="currentCar.description"
+/>
+
+<div *ngFor="let item of cars; let i = index" class="flex">
+    <button (click)="selectCar(i)">
+        {{ item.name }}
+    </button>
+</div>
