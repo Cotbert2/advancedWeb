@@ -1,0 +1,14 @@
+<div class="project-card">
+<img [src]="projectData.image" alt="Project 1 screenshot" class="project-img">
+<div class="project-content">
+    <h3>{{projectData.title}}</h3>
+    <p class="respect-endline">{{projectData.description}}</p>
+    <div class="tech-icons">
+        @for (item of projectData.technologies; track $index) {
+            <i [class]="item"></i>
+        }
+    </div>
+    <a [href]="projectData.repository" target="_blank" class="github-link">
+    <i class="devicon-github-original"></i> GitHub</a>
+</div>
+</div>

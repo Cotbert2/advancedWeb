@@ -1,0 +1,45 @@
+
+    <div class="container">
+    <header>
+        <h1>$ whoami</h1>
+        <p>Hello strange, my name is Mateo García, but u can call me <span class="highlight">Cotbert</span> <br>
+            In the complex task of try to undested what means "whoami"<br> let me tell you a little about me.</p>
+    </header>
+
+
+
+    @for (item of aboutItems(); track $index) {
+        <app-about-item [info]="item" [photoFirst]="$index /2 == 0"></app-about-item>
+    }
+
+    <div class="item">
+        <div class="card">
+            <h2>$ cawsay ./Experience.txt</h2>
+            <ul style="list-style: none; padding-left: 0; line-height: 1.6;">
+                <li><span class="highlight">•</span> 🏫 Taught programming to high school students at <em>Unidad
+                        Educativa Don Bosco</em></li>
+                <li><span class="highlight">•</span> 💻 Worked as a freelance developer: building bespoke apps and
+                    contributing to open-source projects</li>
+                <li><span class="highlight">•</span> 📱 Published free mobile apps on the Play Store, like
+                    “Visual Morse”</li>
+                <li><span class="highlight">•</span> 🌐 Fullstack Web Developer at AtiJaguar LTDA
+                    <br><small>(Projects: Municipality of Quito, Ministry of the Environment ·
+                        Jul 2022 – present)</small>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+
+  
+
+    <div class="highlight-box">
+        <h2>My manifesto</h2>
+        “The current conditions of life are not bearable in the long run, technology is a tool that allows us to progress, however, freedom under it is surrounded by pollution and access only to those who have resources under the material bias.
+        My life goal is to change the world by contributing from the minimum with the intention of achieving a significant change in people's lives. Likewise, respect for animal life and awareness of reproduction, following the principles of Objectivism proposed by Ayn Rand.”
+        </div>
+
+</div>

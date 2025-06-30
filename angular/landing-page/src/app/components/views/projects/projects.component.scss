@@ -1,0 +1,29 @@
+@use './../../shared/common-styles.scss';
+
+.projects-section {
+    padding: 4rem 0;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: #00ff9f;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.project-card {
+    background: #222;
+    border: 1px solid #00ff9f;
+    border-radius: 8px;
+    overflow: hidden;
+    width: calc(33.333% - 1.33rem);
+    display: flex;
+    flex-direction: column;
+}

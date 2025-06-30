@@ -1,0 +1,13 @@
+<div class="item">
+    @if (photoFirst) {
+        <img [src]="info?.image" alt="" class="image-side">
+    }
+    <div class="card">
+        <h2>{{info?.title}}</h2>
+        <p class="respect-endline"> {{info?.description}}</p>
+    </div>
+    @if (!photoFirst) {
+        <img [src]="info?.image" alt="" class="image-side">
+    }
+
+</div>

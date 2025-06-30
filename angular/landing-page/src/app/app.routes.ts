@@ -3,18 +3,18 @@ import { Routes } from '@angular/router';
 export const routes: Routes = [
     {
         path: '',
-        loadComponent: () => import('./views/home/home.component').then(m => m.HomeComponent)
+        loadComponent: () => import('./components/views/home/home.component').then(m => m.HomeComponent)
     },
     {
         path: 'about',
-        loadComponent: () => import('./views/about/about.component').then(m => m.AboutComponent)
+        loadComponent: () => import('./components/views/about/about.component').then(m => m.AboutComponent)
     },
     {
         path: 'skills',
-        loadComponent: () => import('./views/skills/skills.component').then(m => m.SkillsComponent)
+        loadComponent: () => import('./components/views/skills/skills.component').then(m => m.SkillsComponent)
     }, 
     {
         path: 'projects',
-        loadComponent: () => import('./views/projects/projects.component').then(m => m.ProjectsComponent)
+        loadComponent: () => import('./components/views/projects/projects.component').then(m => m.ProjectsComponent)
     }
 ];

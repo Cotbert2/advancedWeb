@@ -1,0 +1,14 @@
+
+<section id="projects" class="projects-section">
+    <header>
+        <h1>$tree ./projects</h1>
+        <p>Here you can seee my hard and soft skills</p>
+    </header>
+    <div class="projects-grid">
+      @for (item of projects(); track $index) {
+          <app-project-card
+          class="project-card"
+          [projectData]="item"></app-project-card>
+      }
+    </div>
+  </section>
