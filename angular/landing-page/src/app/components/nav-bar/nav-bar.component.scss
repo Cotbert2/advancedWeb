@@ -99,3 +99,77 @@ nav ul li:hover {
     transform: translateY(-2px);
     transition: transform 0.3s ease;
 }
+
+// Hamburger button
+.hamburger {
+    display: none;
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    color: #00ff9f;
+    cursor: pointer;
+    z-index: 1000;
+    transition: color 0.3s ease;
+
+    &:hover {
+        color: #00c77a;
+    }
+
+    i {
+        pointer-events: none;
+    }
+}
+
+// Mobile styles
+@media (max-width: 768px) {
+    nav {
+        flex-wrap: wrap;
+        position: relative;
+    }
+
+    .hamburger {
+        display: block;
+        order: 2;
+    }
+
+    nav .logo {
+        order: 1;
+    }
+
+    nav .contact-btn {
+        order: 3;
+        margin-left: auto;
+    }
+
+    nav ul {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background: rgba(17, 17, 17, 0.98);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        transition: right 0.3s ease;
+        z-index: 999;
+        border-left: 2px solid #00ff9f;
+        box-shadow: -5px 0 20px rgba(0, 255, 159, 0.2);
+
+        &.active {
+            right: 0;
+        }
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li a {
+        font-size: 1.2rem;
+        display: block;
+        padding: 1rem;
+    }
+}

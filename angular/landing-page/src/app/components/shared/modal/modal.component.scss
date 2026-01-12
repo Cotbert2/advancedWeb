@@ -54,3 +54,57 @@
         .modal-body a:hover {
             text-decoration: underline;
         }
+
+        /* Responsive para dispositivos móviles */
+        @media (max-width: 768px) {
+            .modal {
+                width: calc(100% - 2rem);
+                max-width: 320px;
+                left: 1rem !important;
+                right: 1rem;
+                top: 50% !important;
+                transform: translateY(-50%);
+                cursor: default;
+            }
+
+            .modal-header {
+                padding: 0.75rem;
+                font-size: 0.9rem;
+            }
+
+            .modal-header .close-btn {
+                font-size: 1.5rem;
+                padding: 0 0.75rem;
+            }
+
+            .modal-body {
+                padding: 0.875rem;
+                font-size: 0.9rem;
+                line-height: 1.6;
+            }
+
+            .modal-body p {
+                margin-bottom: 0.75rem;
+                word-break: break-word;
+            }
+
+            .modal-body a {
+                word-break: break-all;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .modal {
+                width: calc(100% - 1.5rem);
+                left: 0.75rem !important;
+            }
+
+            .modal-body {
+                font-size: 0.85rem;
+                padding: 0.75rem;
+            }
+
+            .modal-header {
+                padding: 0.6rem;
+            }
+        }

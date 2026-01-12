@@ -10,8 +10,17 @@ import { ModalComponent } from "../shared/modal/modal.component";
 })
 export class NavBarComponent {
   showModal : boolean = false;
+  isMenuOpen : boolean = false;
 
   handleModal() {
     this.showModal = !this.showModal;
+  }
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  closeMenu() {
+    this.isMenuOpen = false;
   }
 }

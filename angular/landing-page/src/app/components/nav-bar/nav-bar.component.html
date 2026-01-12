@@ -1,10 +1,15 @@
     <nav>
         <div class="logo">Cotbert</div>
-        <ul>
-            <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a></li>
-            <li><a routerLink="/about" routerLinkActive="active">About</a></li>
-            <li><a routerLink="/skills" routerLinkActive="active">Skills</a></li>
-            <li><a routerLink="/projects" routerLinkActive="active">Projects</a></li>
+        
+        <button class="hamburger" (click)="toggleMenu()" [class.active]="isMenuOpen">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <ul [class.active]="isMenuOpen">
+            <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Home</a></li>
+            <li><a routerLink="/about" routerLinkActive="active" (click)="closeMenu()">About</a></li>
+            <li><a routerLink="/skills" routerLinkActive="active" (click)="closeMenu()">Skills</a></li>
+            <li><a routerLink="/projects" routerLinkActive="active" (click)="closeMenu()">Projects</a></li>
         </ul>
         <div class="contact-btn">
             <a (click)="handleModal()" class="open-btn">Contact</a>

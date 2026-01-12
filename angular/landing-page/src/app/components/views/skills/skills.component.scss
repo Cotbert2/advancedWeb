@@ -1,13 +1,16 @@
 @use './../../shared/common-styles.scss';
 
-
-
-
-
-
-
-
-
+.card a img {
+    width: 120px !important;
+    height: 28px !important;
+    min-width: 120px !important;
+    min-height: 28px !important;
+    max-width: 120px !important;
+    max-height: 28px !important;
+    object-fit: cover;
+    margin: 0.25rem !important;
+    display: inline-block;
+}
 
 .circle-chart {
     --size: 40px;
@@ -44,3 +47,43 @@
 .circle-chart-text {
     z-index: 1;
 }
+
+/* Responsive para dispositivos móviles */
+@media (max-width: 768px) {
+    .circle-chart {
+        --size: 35px;
+        margin: 0 0.5rem;
+        font-size: 0.65rem;
+    }
+
+    .card a {
+        display: inline-block;
+    }
+
+    .card a img {
+        width: 120px !important;
+        height: 28px !important;
+        min-width: 120px !important;
+        min-height: 28px !important;
+        max-width: 120px !important;
+        max-height: 28px !important;
+        margin: 0.15rem !important;
+    }
+
+    .lang {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .card ul {
+        font-size: 0.9rem;
+    }
+
+    .card h2 {
+        font-size: 1.2rem;
+    }
+}
+

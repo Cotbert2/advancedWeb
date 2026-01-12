@@ -27,3 +27,30 @@
     display: flex;
     flex-direction: column;
 }
+
+/* Responsive para dispositivos móviles */
+@media (max-width: 768px) {
+    .projects-section {
+        padding: 2rem 0;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .projects-grid {
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+
+    .project-card {
+        width: 100%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .project-card {
+        width: calc(50% - 1rem);
+    }
+}

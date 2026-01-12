@@ -73,3 +73,56 @@ header p {
     line-height: 1.6;
     box-shadow: 0 0 10px rgba(0, 255, 159, 0.1);
 }
+
+/* Responsive para dispositivos móviles */
+@media (max-width: 768px) {
+    .container {
+        padding: 1.5rem;
+    }
+
+    header {
+        margin-bottom: 2rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    .item {
+        flex-direction: column;
+        padding: 0;
+        margin-bottom: 2rem;
+    }
+
+    .item .card {
+        margin: 1rem 0;
+    }
+
+    .image-side {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 1rem;
+    }
+
+    .card {
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .card h2,
+    .highlight-box h2 {
+        font-size: 1.3rem;
+    }
+
+    .highlight-box {
+        padding: 1rem;
+        margin: 1.5rem 0;
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+}
